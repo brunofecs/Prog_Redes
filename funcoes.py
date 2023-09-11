@@ -26,8 +26,8 @@ def salvar_lista(nome_lista: list, nome_arquivo: str):
     except:
         print(f'\nERRO DESCONHECIDO: {sys.exc_info()[0]}')
     else:
-        for i in nome_lista: nome_arquivo.write(f'{i}\n')
+        for i in nome_lista: arq_output.write(f'{i}\n')
         boolSucesso = True
-        nome_arquivo.close()
+        arq_output.close()
 
     return boolSucesso
