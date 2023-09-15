@@ -31,3 +31,16 @@ def salvar_lista(nome_lista: list, nome_arquivo: str):
         arq_output.close()
 
     return boolSucesso
+
+def ler_arquivo(nome_arquivo: str):
+    boolSucesso = False
+    lstRetorno = []
+    try:
+        arq_input = open(nome_arquivo, 'r')
+    except NameError:
+        lstRetorno = none
+    else:
+        lstRetorno.append(arq_input.read())
+        boolSucesso = True
+
+    return boolSucesso, lstRetorno
