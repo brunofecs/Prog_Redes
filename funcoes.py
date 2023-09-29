@@ -40,9 +40,59 @@ def ler_arquivo(nome_arquivo: str):
     try:
         arq_input = open(nome_arquivo, 'r')
     except NameError:
-        lstRetorno = none
+        lstRetorno = None
+    except FileNotFoundError:
+        print('Arquivo não existe, confira e insira novamente!')
+        lstRetorno = None
     else:
-        lstRetorno.append(arq_input.read())
+        for linha in arq_input:
+            lstRetorno.append(arq_input.readlines())
         boolSucesso = True
+
+    return boolSucesso, lstRetorno
+
+
+# ----------------------------------------------------------------------
+def ordena_bubble(nome_lista: list):
+    boolSucesso = False
+    lstOrdenada = None
+
+
+
+    return boolSucesso, lstOrdenada
+
+# ----------------------------------------------------------------------
+def ordena_insertion(nome_lista: list):
+    boolSucesso = False
+    lstOrdenada = None
+
+
+
+    return boolSucesso, lstOrdenada
+
+# ----------------------------------------------------------------------
+def ordena_selection(nome_lista: list):
+    boolSucesso = False
+    lstOrdenada = None
+
+
+
+    return boolSucesso, lstOrdenada
+
+# ----------------------------------------------------------------------
+def ordena_quick(nome_lista: list):
+    boolSucesso = False
+    lstOrdenada = None
+
+
+
+    return boolSucesso, lstOrdenada
+
+# ----------------------------------------------------------------------
+def ordena_lista(nome_lista: str, metodo_ordena: str):
+    boolSucesso = False
+    lstRetorno = None
+
+
 
     return boolSucesso, lstRetorno
