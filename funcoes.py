@@ -45,8 +45,9 @@ def ler_arquivo(nome_arquivo: str):
         print('Arquivo não existe, confira e insira novamente!')
         lstRetorno = None
     else:
-        for linha in arq_input:
-            lstRetorno.append(arq_input.readlines())
+        lstRetorno = arq_input.readlines()
+        for num in range(len(lstRetorno)):
+            lstRetorno[num] = lstRetorno[num].rstrip('\n')
         boolSucesso = True
 
     return boolSucesso, lstRetorno
