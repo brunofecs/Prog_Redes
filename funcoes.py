@@ -32,6 +32,8 @@ def salvar_lista(nome_lista: list, nome_arquivo: str):
 
     return boolSucesso
 
+
+# ----------------------------------------------------------------------
 def ler_arquivo(nome_arquivo: str):
     boolSucesso = False
     lstRetorno = []
